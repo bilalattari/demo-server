@@ -1,22 +1,24 @@
 {
-  "name": "demo-server",
+  "name": "todoapp-full-stack",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "react": "cd client && npm run start",
+    "dev": "concurrently \"npm run server\" \"npm run react\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bilalattari/demo-server.git"
-  },
-  "author": "Bilal",
+  "author": "Muhammad Nasir",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bilalattari/demo-server/issues"
-  },
-  "homepage": "https://github.com/bilalattari/demo-server#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5",
+    "nodemon": "^1.18.3",
+    "socket.io": "^2.1.1"
   }
 }
