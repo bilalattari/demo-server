@@ -34,9 +34,9 @@ app.get('/todos', (req, res, err) => {
         res.send({ allToDos: data })
     })
 })
-
+const PORT = process.env.PORT
 app.use('/todo', require('./routes/todo'))
-let server = app.listen(4001, () => {
+let server = app.listen( PORT  || 4000, () => {
     console.log('Listen At 4001')
 })
 var io = socket(server);
